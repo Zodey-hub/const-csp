@@ -1,0 +1,11 @@
+error: no rules expected `data`
+ --> tests/compile_fail/missing_comma.rs:1:55
+  |
+1 | const POLICY: &str = const_csp::csp! { img_src: [self data] };
+  |                                                       ^^^^ no rules expected this token in macro call
+  |
+note: while trying to match `]`
+ --> src/lib.rs
+  |
+  |             $directive:ident $(: [$($value:tt $(($argument:literal))?),* $(,)?])?
+  |                                                                               ^

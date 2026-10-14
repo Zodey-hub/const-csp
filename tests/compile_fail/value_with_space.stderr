@@ -1,0 +1,7 @@
+error[E0080]: evaluation panicked: invalid CSP value "https://a.example.com https://b.example.com": it must be non-empty and must not contain whitespace, quotes, `;` or `,` (write keywords as names, e.g. self instead of "'self'")
+ --> tests/compile_fail/value_with_space.rs:1:22
+  |
+1 | const POLICY: &str = const_csp::csp! { img_src: ["https://a.example.com https://b.example.com"] };
+  |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ evaluation of `POLICY::_` failed here
+  |
+  = note: this error originates in the macro `$crate::panic::panic_2021` which comes from the expansion of the macro `const_csp::csp` (in Nightly builds, run with -Z macro-backtrace for more info)

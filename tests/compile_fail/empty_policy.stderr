@@ -1,0 +1,11 @@
+error: unexpected end of macro invocation
+ --> tests/compile_fail/empty_policy.rs:1:22
+  |
+1 | const POLICY: &str = const_csp::csp! {  };
+  |                      ^^^^^^^^^^^^^^^^^^^^ missing tokens in macro arguments
+  |
+note: while trying to match meta-variable `$directive:ident`
+ --> src/lib.rs
+  |
+  |             $directive:ident $(: [$($value:tt $(($argument:literal))?),* $(,)?])?
+  |             ^^^^^^^^^^^^^^^^

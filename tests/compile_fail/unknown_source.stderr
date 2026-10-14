@@ -1,0 +1,7 @@
+error: unknown CSP source `slef`: use a keyword (self, none, unsafe_inline, ...), a scheme (https, data, blob, ...), sha256("...") or a host string
+ --> tests/compile_fail/unknown_source.rs:1:22
+  |
+1 | const POLICY: &str = const_csp::csp! { img_src: [slef] };
+  |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: this error originates in the macro `$crate::__csp_source` which comes from the expansion of the macro `const_csp::csp` (in Nightly builds, run with -Z macro-backtrace for more info)

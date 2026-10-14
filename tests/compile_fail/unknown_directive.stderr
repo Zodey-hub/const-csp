@@ -1,0 +1,7 @@
+error: invalid CSP directive `img_scr : [self]`: unknown directive name, or a value list this directive does not accept
+ --> tests/compile_fail/unknown_directive.rs:1:22
+  |
+1 | const POLICY: &str = const_csp::csp! { img_scr: [self] };
+  |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: this error originates in the macro `$crate::__csp_directive` which comes from the expansion of the macro `const_csp::csp` (in Nightly builds, run with -Z macro-backtrace for more info)

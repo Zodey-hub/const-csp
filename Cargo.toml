@@ -1,0 +1,15 @@
+[package]
+name = "const-csp"
+version = "0.1.0"
+edition = "2024"
+authors = ["Bálint Máté <balint.mate@mozaweb.com>"]
+description = "Typed Content-Security-Policy header values built at compile time"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["csp", "content-security-policy", "security", "http", "const"]
+categories = ["web-programming", "no-std", "rust-patterns"]
+
+[dependencies]
+
+[dev-dependencies]
+trybuild = "1.0.122"
